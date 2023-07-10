@@ -1,3 +1,5 @@
+import QuotesList from './quotesList'
+
 export default function Input() {
   return (
     <>
@@ -7,6 +9,7 @@ export default function Input() {
           placeholder="Digite o Conselhos"
           className="h-10 w-96 rounded-xl border-none pl-3"
         />
+        <QuotesList />
       </div>
     </>
   )
