@@ -1,12 +1,12 @@
-import Input from '@/app/components/input'
+import QuotesList from './components/quotesList'
 
 export default function Home() {
   return (
     <>
-      <div className="h-screen w-screen">
+      <div className="m-10">
         <div className="flex h-full w-full flex-col items-center justify-center gap-2">
-          <h2 className="text-lg text-white">Seu Conselho Diario</h2>
-          <Input />
+          <h1 className="text-2xl text-white">Conselhos Search</h1>
+          <QuotesList />
         </div>
       </div>
     </>
