@@ -1,4 +1,5 @@
 import QuotesList from './components/quotesList'
+import Footer from './components/footer'
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
           <QuotesList />
         </div>
       </div>
+      <Footer />
     </>
   )
 }

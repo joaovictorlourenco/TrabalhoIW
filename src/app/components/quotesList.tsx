@@ -26,17 +26,17 @@ export default function QuotesList() {
       <input
         type="text"
         placeholder="Digite o Conselhos"
-        className="h-10 w-96 rounded-xl border-none pl-3"
+        className="h-10 w-96 rounded-xl border-none pl-3 max-sm:w-64"
         name="search"
         onChange={(e) => setSearch(e.target.value)}
         value={search}
       />
-      <ul className="grid grid-cols-4 gap-2">
+      <ul className="grid grid-cols-4 gap-2 max-xl:grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1">
         {search.length > 0
           ? filteredQuotes.map((quote) => {
               return (
                 <li
-                  className="flex h-72 w-72 flex-col items-center justify-between justify-items-center rounded-md bg-white p-2"
+                  className="flex h-72 w-72 flex-col items-center justify-between justify-items-center rounded-md bg-white p-2 shadow-lg"
                   key={quote.id}
                 >
                   <p>{quote.id}</p>
@@ -48,7 +48,7 @@ export default function QuotesList() {
           : quotes?.map((quote) => {
               return (
                 <li
-                  className="flex h-72 w-72 flex-col items-center justify-between justify-items-center rounded-md bg-white p-2"
+                  className="flex h-72 w-72 flex-col items-center justify-between justify-items-center rounded-md bg-white p-2 shadow-lg"
                   key={quote.id}
                 >
                   <p>{quote.id}</p>
