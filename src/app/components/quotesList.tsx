@@ -7,10 +7,12 @@ type Quote = {
   quote: String
   author: String
 }
+
 export default function QuotesList() {
-  const { data: quotes } = useAPI<Quote[]>('https://dummyjson.com/quotes/')
+  const { data } = useAPI('https://dummyjson.com/quotes/')
   const [search, setSearch] = useState<string>('')
   const [filteredQuotes, setFilteredQuotes] = useState<Quote[]>([])
+  const quotes = data as Quote[]
 
   useEffect(() => {
     if (quotes) {
